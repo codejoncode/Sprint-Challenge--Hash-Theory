@@ -9,13 +9,14 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
   if (length < 2){
     return NULL; 
   }
-
+  printf("Am I inside of this\n");
   HashTable *ht = create_hash_table(16);
   HashTable *ht2 = create_hash_table(16); 
   // key = weight    and the  value =  index in array 
   int key = 0; 
   int value = 0;
   int index_1, index_2, test_value_match; 
+  struct Answer *returning;
 
   for (int weight = 0; weight< length; weight++){
     // printf("%d\n", weights[weight]);
@@ -32,11 +33,13 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
     if (test_value_match >= 0){
       index_1 = weight; 
       index_2 = hash_table_retrieve(ht, value); //gets index stored. 
-
-      struct Answer *returning = NULL;
+      printf("Where do you fail?\n");
+      
       returning->index_1 = index_1; 
-      returning->index_2 = index_2; 
-
+      returning->index_2 = index_2;
+      printf("Get here\n"); 
+      destroy_hash_table(ht);
+      destroy_hash_table(ht2);
       return returning;  
 
     } 

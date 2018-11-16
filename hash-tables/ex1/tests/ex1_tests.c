@@ -6,13 +6,14 @@ char *test_ex1()
 {
   int weights_1 = {9};
   Answer *answer_1 = get_indices_of_item_weights(&weights_1, 1, 9);
+  printf("problem here\n");
   mu_assert(answer_1 == NULL, "Your function did not return the expected answer for input {9}");
-  printf("got through first"); 
+  printf("got through first\n"); 
   int weights_2[] = {4, 4};
   Answer* answer_2 = get_indices_of_item_weights(weights_2, 2, 8);
   mu_assert(answer_2->index_1 == 1, "Your function did not return the expected answer for input {4, 4}");
   mu_assert(answer_2->index_2 == 0, "Your function did not return the expected answer for input {4, 4}");
-
+  printf("second tests\n");
   int weights_3[] = {4, 6, 10, 15, 16};
   Answer* answer_3 = get_indices_of_item_weights(weights_3, 5, 21);
   mu_assert(answer_3->index_1 == 3, "Your function did not return the expected answer for input {4, 6, 10, 15, 16}");
