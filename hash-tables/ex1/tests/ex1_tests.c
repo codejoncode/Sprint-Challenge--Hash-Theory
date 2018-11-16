@@ -7,7 +7,7 @@ char *test_ex1()
   int weights_1 = {9};
   Answer *answer_1 = get_indices_of_item_weights(&weights_1, 1, 9);
   mu_assert(answer_1 == NULL, "Your function did not return the expected answer for input {9}");
-
+  printf("got through first"); 
   int weights_2[] = {4, 4};
   Answer* answer_2 = get_indices_of_item_weights(weights_2, 2, 8);
   mu_assert(answer_2->index_1 == 1, "Your function did not return the expected answer for input {4, 4}");
