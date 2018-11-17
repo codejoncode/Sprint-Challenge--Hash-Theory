@@ -1,4 +1,3 @@
-DEBUG tests/ex1_tests.c:39: ----- RUNNING: ./tests/ex1_tests
-DEBUG tests/ex1_tests.c:34: 
+DEBUG tests/ex1_tests.c:43: ----- RUNNING: ./tests/ex1_tests
+DEBUG tests/ex1_tests.c:38: 
 ----- test_ex1
-Segmentation fault (core dumped)
