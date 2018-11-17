@@ -106,5 +106,5 @@ A     B     C      carry   sum
 1     1     0        1      0
 1     1     1        1      1
 ```
-* SUM =   
-* CARRY = 
+* SUM =   (A ^ B) ^ C    or   (A xor B) xor C
+* CARRY = (A && B) || C  and (A^B)
